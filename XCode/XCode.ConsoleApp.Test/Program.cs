@@ -23,7 +23,7 @@ namespace XCode.ConsoleApp.Test
 
                     if (dbexist)
                     {
-                        //创建成功
+                        //生成mysql数据库
                     }
                 }
             }
