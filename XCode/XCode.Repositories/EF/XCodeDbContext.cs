@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XCode.Domain;
+using XCode.Domain.Entity.ModelConfigurations;
 
 namespace XCode.Repositories.EF
 {
@@ -24,6 +25,10 @@ namespace XCode.Repositories.EF
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
+            //Fluent API配置属性
+            modelBuilder.Configurations.Add(new ProductConfiguration());
+
             base.OnModelCreating(modelBuilder);
             // register mysql code generator
             new  DbMigrationsConfiguration().SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
