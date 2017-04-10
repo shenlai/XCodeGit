@@ -58,6 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="EF\EntityFrameworkRepository.cs" />
+    <Compile Include="EF\EntityFrameworkRepositoryContext.cs" />
+    <Compile Include="EF\IEntityFrameworkRepositoryContext.cs" />
+    <Compile Include="EF\ProductRepository.cs" />
     <Compile Include="EF\XCodeDbContext.cs" />
     <Compile Include="Migrations\201703111450301_addcategotiestable.cs" />
     <Compile Include="Migrations\201703111450301_addcategotiestable.Designer.cs">
@@ -70,6 +74,10 @@
     <Compile Include="Migrations\201703111613485_updateCate.cs" />
     <Compile Include="Migrations\201703111613485_updateCate.Designer.cs">
       <DependentUpon>201703111613485_updateCate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704100934564_Category.cs" />
+    <Compile Include="Migrations\201704100934564_Category.Designer.cs">
+      <DependentUpon>201704100934564_Category.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703111613485_updateCate.resx">
       <DependentUpon>201703111613485_updateCate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704100934564_Category.resx">
+      <DependentUpon>201704100934564_Category.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

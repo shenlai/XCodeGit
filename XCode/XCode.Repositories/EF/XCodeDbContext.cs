@@ -10,6 +10,9 @@ using XCode.Domain.Entity.ModelConfigurations;
 
 namespace XCode.Repositories.EF
 {
+
+    /*Mehdi El Gueddari对EF DbContext封装  https://github.com/mehdime/DbContextScope*/
+
     //也可在config中配置<entityFramework codeConfigurationType="MySql.Data.Entity.MySqlEFConfiguration, MySql.Data.Entity.EF6">
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public sealed class XCodeDbContext : DbContext

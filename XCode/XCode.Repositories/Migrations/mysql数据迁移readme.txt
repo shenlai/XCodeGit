@@ -16,6 +16,6 @@ Enable-Migrations 启用迁移
 
 Add-Migration   [-Name 指定自定义脚本的名称] 为挂起的Model变化添加迁移脚本
 
-Update-Database [verbose 指定输出执行的SQL和其他信息到控制台] 将挂起的迁移更新到数据库
+Update-Database -Verbose [-verbose 指定输出执行的SQL和其他信息到控制台] 将挂起的迁移更新到数据库
 
 Get-Migrations 获取已经应用的迁移
