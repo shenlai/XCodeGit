@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using XCode.Repositories.EF;
 using XCode.Domain;
 using XCode.Infrastructure;
+using System.Linq.Expressions;
+using XCode.Domain.Specifications;
+using System.Collections.Generic;
 
 namespace XCode.Repositories.Test
 {
@@ -28,7 +31,26 @@ namespace XCode.Repositories.Test
 
             //context.Commit();
 
-            int x = 0;
+           // int x = 0;
+        }
+
+
+        [TestMethod]
+        public void TestSpecification()
+        {
+            Expression<Func<Product, bool>> one = x => x.Name == "人民的名义";
+            Expression<Func<Product, bool>> other = y => y.UnitPrice < 100;
+
+            var combine = one.And(other);
+
+            var expressionSpec = new ExpressionSpecification<Product>(combine);
+
+            List<Product> list = new List<Product>() { new Product() { Name = "人民的名义", UnitPrice = 80 }, new Product() { Name = "人民的名义", UnitPrice = 120 } };
+
+            Assert.IsTrue(combine.Compile()(list[0]));
+            Assert.IsFalse(combine.Compile()(list[1]));
+
+
         }
     }
 }

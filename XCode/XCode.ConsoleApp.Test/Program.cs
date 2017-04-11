@@ -15,6 +15,19 @@ namespace XCode.ConsoleApp.Test
 
             Console.WriteLine("111");
 
+
+            A a;
+            B b;
+
+            a = new A();
+            b = new B();
+            a.Foo();  // output --> "A::Foo()"
+            b.Foo();  // output --> "B::Foo()"
+
+            a = new B();
+            a.Foo();  // output --> "A::Foo()"
+
+
             try
             {
                 using (var ctx = new XCodeDbContext())
@@ -36,4 +49,19 @@ namespace XCode.ConsoleApp.Test
 
         }
     }
+
+
+
+    class A
+    {
+        public void Foo() { Console.WriteLine("A::Foo()"); }
+    }
+
+    class B : A
+    {
+        public new void Foo() { Console.WriteLine("B::Foo()"); }
+    }
+
+    
+
 }
