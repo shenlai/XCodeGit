@@ -1,7 +1,7 @@
 ﻿
 namespace XCode.Domain
 {
-    public class Product:AggreagteRoot
+    public class Product: AggregateRoot
     {
         public string Name { get; set; }
 

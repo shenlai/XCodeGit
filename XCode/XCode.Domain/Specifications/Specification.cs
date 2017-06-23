@@ -11,12 +11,12 @@ namespace XCode.Domain.Specifications
     {
         public bool IsStatisfiedBy(T obj)
         {
-            return this.GetExpression.Compile()(obj);
+            return this.Expression.Compile()(obj);
         }
 
         /// <summary>
         /// 获得规约表达式树
         /// </summary>
-        public abstract Expression<Func<T, bool>> GetExpression { get; }
+        public abstract Expression<Func<T, bool>> Expression { get; }
     }
 }

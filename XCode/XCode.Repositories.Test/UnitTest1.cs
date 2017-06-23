@@ -52,5 +52,22 @@ namespace XCode.Repositories.Test
 
 
         }
+
+
+
+        [TestMethod]
+        public void TestGetEntityList()
+        {
+            var context = new EntityFrameworkRepositoryContext();
+            var pro = new ProductRepository(context);
+
+            var sp = new ExpressionSpecification<Product>(p => p.UnitPrice > 20);
+            var res = pro.GetEntityList(sp, 1, 2);
+            Assert.IsTrue(true);
+        }
+
+
+
+
     }
 }

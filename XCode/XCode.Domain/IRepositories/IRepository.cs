@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XCode.Domain.Specifications;
 using XCode.Infrastructure;
 
 namespace XCode.Domain.IRepositories
@@ -18,7 +19,9 @@ namespace XCode.Domain.IRepositories
 
         //// 读取所有聚合根。
         //IEnumerable<TAggregateRoot> GetAll();
-        
+        PagedResult<TAggregateRoot> GetEntityList(ISpecification<TAggregateRoot> specification, int pageIndex = 0, int pageSize = int.MaxValue, string ordering = null, string includes = null);
+
+
 
     }
 }

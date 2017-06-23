@@ -14,6 +14,6 @@ namespace XCode.Domain.Specifications
         /// <summary>
         /// 获得规约表达式树
         /// </summary>
-        Expression<Func<T, bool>> GetExpression { get; }
+        Expression<Func<T, bool>> Expression { get; }
     }
 }

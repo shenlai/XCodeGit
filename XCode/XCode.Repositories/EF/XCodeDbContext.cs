@@ -24,7 +24,11 @@ namespace XCode.Repositories.EF
 
         //codefirst 映射到数据库中Category（程序类名）<--> Categories(数据库表名)
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Contracts { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductCategorization> ProductCategorizations { get; set; }
+
+
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

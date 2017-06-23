@@ -20,7 +20,7 @@ namespace XCode.Domain.Specifications
             this.expression = expression;
         }
 
-        public override Expression<Func<T, bool>> GetExpression
+        public override Expression<Func<T, bool>> Expression
         {
             get
             {
