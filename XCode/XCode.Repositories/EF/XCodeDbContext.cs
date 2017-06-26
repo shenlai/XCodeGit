@@ -18,14 +18,28 @@ namespace XCode.Repositories.EF
     public sealed class XCodeDbContext : DbContext
     {
         public XCodeDbContext() 
-            : base("MySqlDbContext")
+            : base("name=MySqlDbContext")
         {
+
+            //打印sql log
+            this.Database.Log = new Action<string>(p => System.Diagnostics.Debug.WriteLine(p));
+
         }
 
+
+        //注册Context下所有实体，EF默认使用方式在DbContext下定义实体如DbSet<Product> Products
+        // 通过dbContext.Products.Where(... 方式调用，而非dbContext.Set<Product>().Where(...调用，
+        // 也可在此手写方法注册，避免改动量过大 可参考  xx.framework.dal下EFDbContext
+
+        // 所有需要关联到 Context 的类都要类似如下代码这样定义(针对每个聚合根都会定义一个DbSet的属性)
         //codefirst 映射到数据库中Category（程序类名）<--> Categories(数据库表名)
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<ProductCategorization> ProductCategorizations { get; set; }
+        //public DbSet<Category> Categories { get; set; }
+        //public DbSet<Product> Products { get; set; }
+        //public DbSet<ProductCategorization> ProductCategorizations { get; set; }
+
+        public DbSet<Category> Categories { get { return this.Set<Category>(); } }
+        public DbSet<Product> Products { get { return this.Set<Product>(); } }
+        public DbSet<ProductCategorization> ProductCategorizations { get { return this.Set<ProductCategorization>(); } }
 
 
 

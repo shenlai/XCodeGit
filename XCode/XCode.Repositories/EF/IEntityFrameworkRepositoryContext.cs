@@ -16,7 +16,7 @@ namespace XCode.Repositories.EF
     public interface IEntityFrameworkRepositoryContext:IRepositoryContext
     {
 
-        //XCodeDbContext DbContext { get; }
-        DbContext DbContext { get; }
+        XCodeDbContext DbContext { get; }
+        //DbContext DbContext { get; }
     }
 }

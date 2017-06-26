@@ -67,6 +67,7 @@ namespace XCode.Repositories.EF
                 //{
 
                     var query = this.efContext.DbContext.Set<TAggregateRoot>() as IQueryable<TAggregateRoot>;
+                    //var query = context.Set<TAggregateRoot>() as IQueryable<TAggregateRoot>;
                     //饥饿加载
                     //if (!string.IsNullOrEmpty(includes))
                     //{

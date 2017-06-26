@@ -19,7 +19,7 @@ namespace XCode.Domain.IRepositories
 
         //// 读取所有聚合根。
         //IEnumerable<TAggregateRoot> GetAll();
-        PagedResult<TAggregateRoot> GetEntityList(ISpecification<TAggregateRoot> specification, int pageIndex = 0, int pageSize = int.MaxValue, string ordering = null, string includes = null);
+        PagedResult<TAggregateRoot> GetEntityList(ISpecification<TAggregateRoot> specification, int pageIndex = 1, int pageSize = int.MaxValue, string ordering = null, string includes = null);
 
 
 

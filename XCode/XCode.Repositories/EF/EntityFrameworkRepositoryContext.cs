@@ -19,11 +19,12 @@ namespace XCode.Repositories.EF
         // 但静态变量在多线程访问时需要显式使用线程同步技术。
         // 使用ThreadLocal变量，每个线程都会一个拷贝，从而避免了线程同步带来的性能开销
         private readonly ThreadLocal<XCodeDbContext> localCtx = new ThreadLocal<XCodeDbContext>(() => new XCodeDbContext());
-        
-        public DbContext DbContext { get { return this.localCtx.Value; } }
+
+        // public DbContext DbContext { get { return this.localCtx.Value; } }
+        public XCodeDbContext DbContext { get { return this.localCtx.Value; } }
 
 
-        
+
         public TAggregateRoot RegisterNew<TAggregateRoot>(TAggregateRoot entity)
             where TAggregateRoot : class, IAggregateRoot
         {
