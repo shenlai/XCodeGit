@@ -6,7 +6,6 @@ using System.Net.Http;
 using System.Web.Http;
 using XCode.Application;
 using XCode.DTO;
-using XCode.DTO.Response;
 
 namespace XCode.WebApi.Controllers
 {

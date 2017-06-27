@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XCode.DTO.Response
+namespace XCode.DTO
 {
     public class ResponseHead
     {

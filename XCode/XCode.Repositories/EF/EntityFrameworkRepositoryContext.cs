@@ -20,8 +20,8 @@ namespace XCode.Repositories.EF
         // 使用ThreadLocal变量，每个线程都会一个拷贝，从而避免了线程同步带来的性能开销
         private readonly ThreadLocal<XCodeDbContext> localCtx = new ThreadLocal<XCodeDbContext>(() => new XCodeDbContext());
 
-        // public DbContext DbContext { get { return this.localCtx.Value; } }
-        public XCodeDbContext DbContext { get { return this.localCtx.Value; } }
+        public DbContext DbContext { get { return this.localCtx.Value; } }
+        //public XCodeDbContext DbContext { get { return this.localCtx.Value; } }
 
 
 

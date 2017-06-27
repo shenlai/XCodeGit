@@ -1,0 +1,89 @@
+﻿@using XCode.DTO;
+@model List<ProductDto>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+
+<div class="container">
+    <div class="row" id="post-list">
+       
+        @foreach (var item in Model)
+        {
+            <div class="col-xs-12 col-md-6">
+                <article class="post tag-ad">
+                    <h2 class="post-title">
+                        <a href="http://jekyll.com.cn" onclick="_hmt.push(['_trackEvent', 'titlelink', 'click', 'Jekyll中文网'])" target="_blank">@item.Name</a>
+                    </h2>
+                    <div class="post-featured-image">
+                        <a class="thumbnail loaded" href="http://jekyll.com.cn" onclick="_hmt.push(['_trackEvent', 'imagelink', 'click', 'Jekyll中文网'])" target="_blank">
+                            <img src="@Url.Content(string.Format("~/Images/Products/{0}", item.ImageUrl))" width="700" height="438" alt="@item.Name" onload="imgLoaded(this)">
+                        </a>
+                    </div>
+                </article>
+            </div>
+        }
+
+        <div class="col-xs-12 col-md-6">
+            <article class="post tag-ad">
+                <h2 class="post-title">
+                    <a href="http://jekyll.com.cn" onclick="_hmt.push(['_trackEvent', 'titlelink', 'click', 'Jekyll中文网'])" target="_blank">Jekyll中文网</a>
+                </h2>
+                <div class="post-featured-image">
+                    <a class="thumbnail loaded" href="http://jekyll.com.cn" onclick="_hmt.push(['_trackEvent', 'imagelink', 'click', 'Jekyll中文网'])" target="_blank">
+                        <img src="http://image.youzhan.org/2/ee/6f8bba4cb328d2db91bb14a5b6077.png!thumb" width="700" height="438" alt="Jekyll中文网" onload="imgLoaded(this)">
+                    </a>
+                </div>
+            </article>
+        </div>
+
+
+
+    </div>
+    <nav class="pagination">
+        <span class="page-number">第 1 页/共 82 页</span>
+        <a class="older-posts" href="/page/2/">下一页 →</a>
+    </nav>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            
+        });
+
+        function imgLoaded(img) {
+            var imgWrapper = img.parentNode;
+            imgWrapper.className += imgWrapper.className ? ' loaded' : 'loaded';
+        }
+
+    </script>
+}
