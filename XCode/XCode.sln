@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCode.Repositories", "XCode.Repositories\XCode.Repositories.csproj", "{86029955-25A0-4D6E-9EE1-897ABE7DBCED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6_Test", "6_Test", "{5855356D-EBE1-40B9-B225-1AFA0CD3DC91}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\laishen\Desktop\Index.png = C:\Users\laishen\Desktop\Index.png
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCode.ConsoleApp.Test", "XCode.ConsoleApp.Test\XCode.ConsoleApp.Test.csproj", "{548C5955-6669-4BA0-BE9E-B4807BC33C75}"
 EndProject

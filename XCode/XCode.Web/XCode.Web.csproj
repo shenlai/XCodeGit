@@ -185,6 +185,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Index.png" />
     <Content Include="Images\Products\01505235-35b1-4995-804b-a496fb0f81d6.jpg" />
     <Content Include="Images\Products\040DA7EB-D670-4843-A364-6D961217957D.jpg" />
     <Content Include="Images\Products\201501260617014895_390_390.jpg" />
