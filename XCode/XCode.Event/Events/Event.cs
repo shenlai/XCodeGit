@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XCode.Events.Events
+namespace XCode.Events
 {
-    public class Event : IEvent
+    public class BusinessEvent : IEvent
     {
         public DateTime CreateTime { get; set; }
 
         public object Source { get; set; }
 
-        public Event()
+        public BusinessEvent()
         {
             CreateTime = DateTime.Now;
         }

@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DomainEvent\UserEvent.cs" />
+    <Compile Include="DomainEvent\ProductEvent.cs" />
+    <Compile Include="DomainHandler\ProductHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

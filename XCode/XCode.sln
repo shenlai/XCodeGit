@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCode", "XCode\XCode.csproj", "{F4D8378D-5D7D-45FE-8AA4-D7377EBB08BB}"
 EndProject
@@ -45,6 +45,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCode.Events", "XCode.Event\XCode.Events.csproj", "{71DA03A2-E4F5-42ED-840A-784290A83293}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCode.Domain.Events", "XCode.Domain.Event\XCode.Domain.Events.csproj", "{0D1EB820-7143-4D34-910B-7B8FCA4B891C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XCode.Domain.Events.Test", "XCode.Domain.Events.Test\XCode.Domain.Events.Test.csproj", "{3CD1972E-3AD3-4DEF-BB88-45A65B51419D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -108,6 +110,10 @@ Global
 		{0D1EB820-7143-4D34-910B-7B8FCA4B891C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D1EB820-7143-4D34-910B-7B8FCA4B891C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D1EB820-7143-4D34-910B-7B8FCA4B891C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CD1972E-3AD3-4DEF-BB88-45A65B51419D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD1972E-3AD3-4DEF-BB88-45A65B51419D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CD1972E-3AD3-4DEF-BB88-45A65B51419D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CD1972E-3AD3-4DEF-BB88-45A65B51419D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,5 +132,6 @@ Global
 		{DEDFF4CF-8986-43EB-A242-9FC3CF621315} = {DA9934F8-355A-417F-B6A2-1DE84C22E611}
 		{71DA03A2-E4F5-42ED-840A-784290A83293} = {F7DE25F7-0CB4-4A51-952D-B4BAFF59D91D}
 		{0D1EB820-7143-4D34-910B-7B8FCA4B891C} = {DDADEE50-DEEA-41D3-96B6-0C45A7857E2C}
+		{3CD1972E-3AD3-4DEF-BB88-45A65B51419D} = {5855356D-EBE1-40B9-B225-1AFA0CD3DC91}
 	EndGlobalSection
 EndGlobal
