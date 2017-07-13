@@ -13,7 +13,7 @@ namespace XCode.Events
 
         //注册事件
         void RegisterAllHandler(IEnumerable<Assembly> assembles);
-        void Register<THandle>(IHandler handle);
+        //void Register<THandle>(IHandler handle);
         void Register(Type eventType, Type handler);
         void Register<THandle>(Action<THandle> action) where THandle : IEvent;
 

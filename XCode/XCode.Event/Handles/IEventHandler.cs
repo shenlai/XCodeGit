@@ -10,7 +10,7 @@ namespace XCode.Event.Handles
     /// <summary>
     /// 事件处理
     /// </summary>
-    public interface IEventHandler<TEvent>:IHandler where TEvent:IEvent
+    public interface IEventHandler<TEvent> where TEvent:IEvent
     {
         /// <summary>
         /// 处理具体的事件

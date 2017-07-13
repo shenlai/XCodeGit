@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using XCode.Domain.Events;
 using XCode.Event.Handles;
 
@@ -12,7 +8,11 @@ namespace XCode.Domain.Event.DomainHandler
     {
         public void Handle(ProductEvent productEvent)
         {
-            productEvent.Source = productEvent.info;
+
+            //短信通知
+
+            int i = 0;
+            i = i * 100;
         }
     }
 }

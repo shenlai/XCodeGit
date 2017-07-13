@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using XCode.Events;
+using XCode.Domain.Event.DomainHandler;
 
 namespace XCode.Domain.Events.Test
 {
@@ -10,8 +11,13 @@ namespace XCode.Domain.Events.Test
         [TestMethod]
         public void TestProductEvent()
         {
-            EventBus.bus.TiggerEvent<ProductEvent>(new ProductEvent());
-            
+            //订阅
+            EventBus.Instance.Subscribe(new ProductHandler());
+            var entity = new ProductEvent { ProductID = 1 };
+            EventBus.Instance.Publish(entity);
+
+            Assert.IsTrue(true);
+
         }
     }
 }
